@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Padel Coach App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🎾 Padel Coach Planner</h1>
+
+  <div class="buttons">
+    <button onclick="addPlayer()">➕ Player</button>
+    <button onclick="saveData()">💾 Save</button>
+    <button onclick="loadData()">📂 Load</button>
+    <button onclick="exportPDF()">🖨️ Export PDF</button>
+  </div>
+</header>
+
+<main>
+
+<section class="grid">
+
+  <!-- LEFT PANEL -->
+  <div class="card">
+    <h2>Lesson</h2>
+
+    <label>I</label>
+    <textarea id="lesson_I"></textarea>
+
+    <label>A1</label>
+    <textarea id="lesson_A1"></textarea>
+
+    <label>A2</label>
+    <textarea id="lesson_A2"></textarea>
+
+    <label>B</label>
+    <textarea id="lesson_B"></textarea>
+
+    <label>E</label>
+    <textarea id="lesson_E"></textarea>
+
+    <h3>Trainer</h3>
+    <input id="trainer_name" placeholder="Trainer naam">
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="card">
+    <h2>Players</h2>
+    <div id="players"></div>
+
+    <h2>Checklist</h2>
+    <div id="checklist"></div>
+  </div>
+
+</section>
+
+<!-- COURTS -->
+<section class="courts">
+  <div id="courtI" class="court">I</div>
+  <div id="courtA1" class="court">A1</div>
+  <div id="courtA2" class="court">A2</div>
+  <div id="courtB" class="court">B</div>
+  <div id="courtE" class="court">E</div>
+</section>
+
+<!-- PDF AREA (hidden until print) -->
+<div id="pdf"></div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="pdf.js"></script>
+
+</body>
+</html>
